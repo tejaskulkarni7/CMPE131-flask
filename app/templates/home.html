@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+        <body>
+        	{% with messages = get_flashed_messages() %}
+        	{% if messages %}
+        	<ul>
+        		<!--{% for message in messages %} -->
+        		<li> {{messages[0]}} </li>
+        		<!--{% endfor %} -->
+        	</ul>
+        	{% endif %}
+        	{% endwith %}
+                <h1>Welcome {{name}}!</h1>
+		
+                <a href="www.google.com">not google</a>
+                <ul>
+			{%for i in range(0, len)%}
+
+                        	<li>{{city_names[i]}}</li>
+			{%endfor%}
+                </ul>
+                
+                <!--<label for="City Name">City Name</label> -->
+        	<form action="" method='POST'>
+        			{{form.hidden_tag()}}
+        			<p>
+        				{{form.city.label}}
+        				<br>
+        				{{form.city(size=32)}}
+        			</p>
+        			<p>
+        				{{form.submit()}}
+        			</p>
+        	</form>	
+        			
+        </body>
+</html>
