@@ -14,14 +14,14 @@
 		
                 <a href="www.google.com">not google</a>
                 <ul>
-			{%for i in range(0, len)%}
+			{% for i in range(0, len) %}
 
                         	<li>{{city_names[i]}}</li>
-			{%endfor%}
+			{% endfor %}
                 </ul>
                 
-                <!--<label for="City Name">City Name</label> -->
-        	<form action="" method='POST'>
+                
+        	<form action="" method="POST">
         			{{form.hidden_tag()}}
         			<p>
         				{{form.city.label}}
